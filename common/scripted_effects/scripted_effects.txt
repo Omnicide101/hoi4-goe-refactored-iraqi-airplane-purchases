@@ -1,0 +1,18 @@
+meta_IRQ_purchase_aircraft = { # Buy IRQ_aircraft_purchase_amount of FIGHTER_TYPE and FIGHTER_LEVEL aircraft from the British
+	
+	meta_effect = {
+		text = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = [FIGHTER_TYPE][FIGHTER_LEVEL]
+					amount = IRQ_aircraft_purchase_amount
+					producer = [SELLER_TAG]
+				}
+			}
+		}
+		FIGHTER_TYPE = "[This.GetIraqAircraftPurchasable]" # Gets the equipment type from scripted localisation based on the "eq_type" variable, and saves it as "FIGHTER_TYPE_LEVEL" for the meta effect to use
+		FIGHTER_LEVEL = "[?IRQ_aircraft_to_buy_level|.0]" # Gets the "IRQ_aircraft_to_buy_level" variable and saves it as "FIGHTER_LEVEL" for the meta effect to use
+		SELLER_TAG = "[This.GetIraqAircraftSeller]" # Gets either ENG or ITA, depending on the focus taken
+		debug = yes
+	}
+}

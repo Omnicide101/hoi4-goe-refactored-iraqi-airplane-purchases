@@ -1,0 +1,3 @@
+﻿l_english:
+ IRQ_aircraft_purchase_ENG_tt:0 "We will purchase some fighters from @ENG §Y[ENG.GetNameDef]§!. They will be willing to sell us more if we still have the §YAnglo-Iraqi Treaty§!, and we will be able to buy basic planes instead of interwar ones if we have unlocked the technology for them."
+ IRQ_aircraft_purchase_ITA_tt:0 "We will purchase some fighters from @ITA §Y[ITA.GetNameDef]§!. We will be able to buy basic planes instead of interwar ones if we have unlocked the technology for them."

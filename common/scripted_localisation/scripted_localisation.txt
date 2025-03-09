@@ -1,0 +1,32 @@
+# Iraq - purchase aircraft from the British
+defined_text = { # Keys IRQ_aircraft_purchasable_type to correct tech localization for the FIGHTER_TYPE_LEVEL to buy
+    name = GetIraqAircraftPurchasable
+    text = {
+        trigger = {
+            check_variable = { IRQ_aircraft_to_buy = 0 } # BBA
+        }
+        localization_key = "small_plane_airframe_" # Have to add the equipment level number separately or it just puts stuff like "Inter-War Small Airframe" in the meta effect, lol
+    }
+    text = {
+        trigger = {
+            check_variable = { IRQ_aircraft_to_buy = 1 } # No BBA
+        }
+        localization_key = "fighter_equipment_"
+    }
+}
+    
+defined_text = { # Airplane seller, I am going into WW2, and I require your strongest airplanes
+    name = GetIraqAircraftSeller
+    text = {
+        trigger = {
+            check_variable = { IRQ_aircraft_seller = 0 } # ENG
+        }
+        localization_key = "[ENG.GetTag]"
+    }
+    text = {
+        trigger = {
+            check_variable = { IRQ_aircraft_seller = 1 } # ITA
+        }
+        localization_key = "[ITA.GetTag]"
+    }
+}
